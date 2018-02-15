@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="VP_MAST_NODAL_PLACE")
-public class NodalPlace {
+public class NodalPlace extends Traceability{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,6 +20,7 @@ public class NodalPlace {
 	
 	//TODO
 	//@ManyToOne
-	//@JoinColumn(name = "area_id", nullable = false)
+	//@NotNull
+	//@JoinColumn(name = "area_id")
 	//private Area area;
 }

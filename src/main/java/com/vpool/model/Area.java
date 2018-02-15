@@ -11,6 +11,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Table(name="VP_MAST_AREA")
@@ -20,6 +23,8 @@ public class Area extends Traceability{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
+	@NotBlank
+	@Size(min=2)
 	@Column(columnDefinition="VARCHAR(100)")
 	private String areaName;
 	

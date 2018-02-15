@@ -9,6 +9,7 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -18,15 +19,16 @@ public class Traceability {
 
 	@CreationTimestamp
  	@Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "created_date", nullable = false)
+	@NotNull
+    @Column(name = "created_date")
     private Date created;
 
  	@UpdateTimestamp
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "modified_date", nullable = false)
+ 	@NotNull
+    @Column(name = "modified_date")
     private Date updated;
 
-    
     @PrePersist
     protected void onCreate() {
     	updated = created = new Date();
