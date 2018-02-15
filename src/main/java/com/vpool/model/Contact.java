@@ -99,4 +99,20 @@ public class Contact extends Traceability{
 		this.dailyCarpool = dailyCarpool;
 	}
 
+	public String getIsMobileVerified() {
+		return isMobileVerified;
+	}
+
+	public void setIsMobileVerified(String isMobileVerified) {
+		this.isMobileVerified = isMobileVerified;
+	}
+
+	public String getIsEmailVerified() {
+		return isEmailVerified;
+	}
+
+	public void setIsEmailVerified(String isEmailVerified) {
+		this.isEmailVerified = isEmailVerified;
+	}
+
 }
