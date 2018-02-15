@@ -2,3 +2,15 @@ CREATE DATABASE vpoolV001 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 username: <db-username>
 password: <db-password>
+
+Example area insert query
+INSERT INTO vp_mast_area(area_name,near_by_location,created_date,modified_date) VALUES('wakad','Shiv Colony',NOW(),NOW());
+
+Example for status insert query
+INSERT INTO vp_mast_status(status,description,created_date,modified_date) VALUES('Active: Live User','User is actively using the application',NOW(),NOW());
+
+Status
+--------
+Active: Live User
+Inactive: Dead User
+Blocked: Unethical User

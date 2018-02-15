@@ -11,7 +11,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -40,6 +39,12 @@ public class Contact extends Traceability{
 	@Min(10)
 	@NotNull
 	private Long mobileNumber;
+	
+	@Column(columnDefinition="VARCHAR(1) default 'N'")
+	private String isMobileVerified;
+	
+	@Column(columnDefinition="VARCHAR(1) default 'N'")
+	private String isEmailVerified;
 	
 	@NotNull
 	@ManyToOne
